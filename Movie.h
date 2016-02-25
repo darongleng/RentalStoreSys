@@ -1,19 +1,32 @@
 #include <string>
 
-class Movie {
-private:
-	string title;
-	string director;
-	int yearOfRelease;
-	int stock;
-public:
-	virtual void setTitle(string newTitle);
-	virtual void setDirector(string newDirector);
-	virtual void setYearOfRelease(int yearOfRelease);
-	virtual void setStock(int stock);
+namespace css343_group4 {
 
-	virtual int title() const;
-	virtual int director() const;
-	virtual int getYearOfRealse() const;
-	virtual int getstock() const;
-};
+	class Movie {
+	private:
+		string title;
+		string director;
+		int yearOfRelease;
+		int stock;
+
+	public:
+		virtual void setTitle(string newTitle);
+		virtual void setDirector(string newDirector);
+		virtual void setYearOfRelease(int yearOfRelease);
+		virtual void setStock(int stock);
+
+		string getTitle() const;
+		string getDirector() const;
+		virtual int getYearOfRealse() const;
+		virtual int getstock() const;
+
+		void decrement();
+		void increment();
+
+		virtual void print() const;
+		virtual int compareTo(const Movie& otherMovie) const;
+
+		virtual Movie buildMovie(ifstream & data);
+	};
+
+}
