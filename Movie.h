@@ -15,5 +15,5 @@ public:
 	virtual int title() const;
 	virtual int director() const;
 	virtual int getYearOfRealse() const;
-	virtual int get stock() const;
+	virtual int getstock() const;
 };
