@@ -10,8 +10,8 @@ namespace css343_group4 {
 		int stock;
 
 	public:
-		virtual void setTitle(string newTitle);
-		virtual void setDirector(string newDirector);
+		virtual void setTitle(std::string newTitle);
+		virtual void setDirector(std::string newDirector);
 		virtual void setYearOfRelease(int yearOfRelease);
 		virtual void setStock(int stock);
 
@@ -26,7 +26,7 @@ namespace css343_group4 {
 		virtual void print() const;
 		virtual int compareTo(const Movie& otherMovie) const;
 
-		virtual Movie buildMovie(ifstream & data);
+		virtual Movie buildMovie(std::ifstream & data);
 	};
 
 }
